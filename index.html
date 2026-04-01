@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manavya Foundation</title>
+
+<style>
+
+/* Smooth Scroll */
+html{
+scroll-behavior:smooth;
+}
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+/* Header */
+header{
+background:#0a6d4a;
+color:white;
+padding:15px 0;
+position:sticky;
+top:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:90%;
+margin:auto;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+}
+
+/* Hero */
+.hero{
+height:80vh;
+background:url("https://images.unsplash.com/photo-1521791136064-7986c2920216") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background-color:rgba(0,0,0,0.5);
+background-blend-mode:darken;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#ffd700;
+cursor:pointer;
+border-radius:5px;
+font-size:16px;
+}
+
+/* Slider */
+.slider{
+width:100%;
+height:300px;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+transition:0.5s;
+}
+
+.slides img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* About */
+.about{
+padding:60px 12%;
+background:#f4f4f4;
+text-align:center;
+}
+
+.about h2{
+color:#0a6d4a;
+margin-bottom:15px;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:1.7;
+text-align:justify;
+}
+
+/* Contact */
+.contact{
+padding:60px 10%;
+}
+
+.contact h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+form{
+max-width:500px;
+margin:auto;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+padding:10px;
+border:none;
+background:#0a6d4a;
+color:white;
+cursor:pointer;
+}
+
+/* Popup */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:25px;
+width:350px;
+border-radius:10px;
+position:relative;
+animation:popupOpen 0.3s ease;
+}
+
+@keyframes popupOpen{
+from{
+transform:scale(0.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.close{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:20px;
+color:red;
+}
+
+/* Footer */
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Manavya Foundation</h1>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Helping Humanity Together</h2>
+<p>Working for education, environment and social welfare.</p>
+
+<!-- ONLY ONE VOLUNTEER BUTTON -->
+<button onclick="openPopup()">Become Volunteer</button>
+
+</div>
+</section>
+
+<!-- Image Slider -->
+<div class="slider">
+<div class="slides" id="slides">
+<img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a">
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+</div>
+</div>
+
+<section class="about-us">
+
+<h2>About Us</h2>
+<p>
+Manavya Foundation is a non-profit organization dedicated to supporting
+underprivileged communities through education, healthcare awareness,
+and social welfare initiatives. Our goal is to create a positive and
+lasting impact in society by empowering people and improving their
+quality of life.
+</p>
+
+<h3>Our Mission</h3>
+<p>
+Our mission is to promote community development by encouraging
+environmental sustainability, improving sanitation, ensuring access
+to clean water, supporting women empowerment, protecting child welfare,
+and promoting the inclusion of persons with disabilities.
+</p>
+
+<h3>What We Do</h3>
+<p>
+We focus on enhancing the holistic well-being of vulnerable and
+marginalized communities through programs related to education,
+healthcare, livelihood development, nutrition, sanitation,
+mental health, and social welfare.
+</p>
+
+<h3>Our Work & Initiatives</h3>
+<p>
+Manavya Foundation designs and implements impactful social initiatives
+that aim to improve living standards, restore dignity, and promote
+sustainable development among economically weaker sections of society.
+Our efforts in education include supporting schools, learning centers,
+vocational training institutes, digital literacy programs, and
+scholarship opportunities for underprivileged students.
+</p>
+
+<h3>Healthcare Support</h3>
+<p>
+In healthcare, we organize medical camps, mental health awareness
+programs, and community health initiatives while helping people
+access affordable healthcare services.
+</p>
+
+<h3>Livelihood & Empowerment</h3>
+<p>
+We also support livelihood generation and economic empowerment through
+skill development programs and entrepreneurship support, ensuring
+long-term community growth.
+</p>
+
+<h3>Our Commitment</h3>
+<p>
+All activities undertaken by Manavya Foundation are charitable,
+lawful, and carried out without profit motive, in accordance with
+applicable laws and regulations.
+</p>
+
+</section>
+
+<style>
+.about-us{
+max-width:900px;
+margin:60px auto;
+padding:30px;
+font-family:Arial, sans-serif;
+}
+
+.about-us h2{
+text-align:center;
+color:#0a6d4a;
+font-size:34px;
+margin-bottom:25px;
+}
+
+.about-us h3{
+color:#0a6d4a;
+margin-top:20px;
+}
+
+.about-us p{
+line-height:1.7;
+color:#444;
+margin-top:8px;
+text-align:justify;
+}
+</style>
+
+<style>
+.about-us{
+    background:#f5f9f7;
+    padding:70px 20px;
+}
+
+.about-container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-container h2{
+    text-align:center;
+    color:#0a6d4a;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.about-container p{
+    font-size:17px;
+    color:#444;
+    line-height:1.8;
+    margin-bottom:18px;
+    text-align:justify;
+}
+
+.intro{
+    font-size:18px;
+}
+
+.highlight{
+    color:#0a6d4a;
+    font-weight:bold;
+}
+</style>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
+<form onsubmit="return validateForm()">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<!-- Volunteer Popup Form -->
+<div class="popup" id="popup">
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">X</span>
+<h3>Volunteer Form</h3>
+
+<form action="https://formspree.io/f/xkopbbeg" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<textarea name="message" placeholder="Why do you want to join?" required></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 Manavya Foundation | All Rights Reserved</p>
+<p>Contact Number: 9058932838</p>
+</footer>
+
+<script>
+
+/* Slider */
+let index = 0;
+function slideImages(){
+let slides = document.getElementById("slides");
+index++;
+if(index > 2){
+index = 0;
+}
+slides.style.transform = "translateX(" + (-index * 100) + "%)";
+}
+setInterval(slideImages,3000);
+
+/* Popup */
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+/* Contact Form */
+function validateForm(){
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+if(name==="" || email===""){
+alert("Please fill all fields");
+return false;
+}
+
+alert("Message sent successfully!");
+return true;
+}
+
+</script>
+
+</body>
+</html>
